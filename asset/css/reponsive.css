@@ -1,0 +1,327 @@
+/* PC  */
+@media screen and (min-width: 992px) {
+    .menu__drawer {
+        display: none;
+    }
+    .menu__drawer__list-wrap {
+        display: none;
+    }
+}
+/* table and mobile */
+@media screen and (max-width: 991px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__action__title {
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menu__drawer {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+    .menu__drawer__show {
+        padding: 5px;
+        font-size: 3rem;
+    }
+    .menu__drawer--active {
+        display: none;
+    }
+    .menu__drawer__list-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s linear;
+    }
+    .menu__drawer__list-wrap--active {
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu__drawer-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 60%;
+        height: 200%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s linear;
+    }
+    .menu__drawer-list--active {
+        transform: unset;
+        visibility: visible;
+        opacity: 1;
+    }
+    .menu__drawer-item {
+        padding: 30px;
+        font-size: 3rem;
+    }
+    .menu__drawer-item--active {
+        color: red;
+    }
+    .menu__drawer__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 4rem;
+    }
+    .menu__drawer__cover {
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.2);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .light-mode {
+        margin-right: -70px;
+    }
+    .header-html-logo,
+    .header-css-logo,
+    .header-js-logo,
+    .header-node-js-logo,
+    .header-react-js-logo {
+        display: none;
+    }
+    .header__intro {
+        padding-top: 0;
+    }
+    .Skill__experience-wrap {
+        gap: 30px;
+        margin-left: 20px;
+    }
+}
+/* table*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .say-hi {
+        top: 30%;
+        left: 30%;
+    }
+    .my-job {
+        left: 80%;
+        top: 50%;
+    }
+    .About__wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+        padding: 30px;
+    }
+    .Skill__wrap {
+        grid-template-columns: 100%;
+        padding: 20px;
+    }
+    .Skill__media {
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 70px;
+    }
+
+    .experience__time,
+    .knowledge__title {
+        font-size: 3rem;
+    }
+    .knowledge__desc {
+        font-size: 2.5rem;
+    }
+    .Projects__menu__item {
+        font-size: 3rem;
+        width: max-content;
+    }
+    .Project__item-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+    .Project__item {
+        height: 500px;
+    }
+    .Project__item__title {
+        font-size: 3rem;
+    }
+    .Project__item__desc {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+    .mail__img {
+        width: 70px;
+    }
+    .Contacts__mail {
+        font-size: 3rem;
+    }
+    .tel__img {
+        width: 70px;
+    }
+    .Contacts__tel {
+        font-size: 3rem;
+    }
+    .Contacts__form {
+        padding: 40px;
+    }
+    .Contacts__form input {
+        height: 80px;
+    }
+    .Contacts__form input,
+    .form__group textarea {
+        font-size: 2.5rem;
+    }
+    .form__errol {
+        font-size: 2rem;
+    }
+    .input__submit {
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .social__list {
+        font-size: 4rem;
+    }
+}
+/* mobile */
+@media screen and (max-width: 768px) {
+    .header-avt {
+        z-index: 0;
+    }
+    .header-circle {
+        display: none;
+    }
+    .header__intro {
+        z-index: 1;
+        backdrop-filter: blur(5px);
+    }
+    .say-hi {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        border: 1px solid #00c3ff;
+    }
+
+    .my-job {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        border: 1px solid #00c3ff;
+    }
+    .About__wrap {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 100px;
+        padding: 30px;
+    }
+    .About-title {
+        width: 270px;
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .About__item-title,
+    .About__item-desc {
+        text-align: center;
+    }
+    .Skill {
+        margin-bottom: 100px;
+    }
+    .Skill__title {
+        padding: 80px 0;
+    }
+    .Skill__wrap {
+        grid-template-columns: 100%;
+        padding: 20px;
+    }
+    .Skill__media {
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 70px;
+        gap: 10px;
+    }
+    .Skill__experience-wrap {
+        flex-direction: column;
+    }
+    .Skill__experience {
+        gap: 30px;
+    }
+    .experience__time,
+    .knowledge__title {
+        font-size: 2.5rem;
+    }
+    .experience__time {
+        color: #00c3ff;
+    }
+    .experience__time p {
+        display: inline-block;
+    }
+    .knowledge__desc {
+        font-size: 1.8rem;
+    }
+    .Projects {
+        padding: 0px 0 100px;
+    }
+
+    .Projects__title {
+        font-size: 3rem;
+        padding: 0 20px;
+    }
+    .Project__item-wrap {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+    .Skill__img-wrap {
+        height: max-content;
+        min-height: 100px;
+        padding: 5px;
+    }
+    .Skill__img {
+        max-height: 100%;
+    }
+    .Skill__experience-wrap {
+        margin-left: 10px;
+    }
+    .Contacts__list {
+        padding: 20px;
+    }
+    .mail__img {
+        width: 50px;
+    }
+    .Contacts__mail {
+        font-size: 2rem;
+    }
+    .tel__img {
+        width: 50px;
+    }
+    .Contacts__tel {
+        font-size: 2rem;
+    }
+    .Contacts__form {
+        padding: 20px;
+    }
+    .Contacts__form input {
+        height: 50px;
+    }
+    .Contacts__form input,
+    .form__group textarea {
+        font-size: 2rem;
+    }
+    .form__errol {
+        font-size: 1.5rem;
+    }
+    .input__submit {
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+    .social__list {
+        font-size: 3rem;
+    }
+}
