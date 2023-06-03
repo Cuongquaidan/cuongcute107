@@ -248,7 +248,6 @@ a {
     bottom: 0px;
     left: 50%;
     transform: translate(-50%);
-    filter: blur(5px);
 }
 .header-html-logo {
     position: absolute;
