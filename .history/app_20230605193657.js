@@ -107,10 +107,8 @@ body.addEventListener("click", function (e) {
 window.addEventListener("scroll", function (e) {
     sections.forEach(function (item) {
         let dataScroll = item.getAttribute("data-Scroll");
-        let scrollY = window.scrollY;
-        let top = item.offsetTop;
-        let height = item.offsetHeight;
-        if (scrollY >= top && scrollY < top + height) {
+        let { top, bottom } = item.getBoundingClientRect();
+        if (window.scrollY > top && window.scrollY < bottom) {
             headerNav.forEach(function (i) {
                 i.classList.remove("header__nav-item--active");
                 if (i.getAttribute("data-NavScroll") === dataScroll) {

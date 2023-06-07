@@ -104,17 +104,17 @@ body.addEventListener("click", function (e) {
     }
 });
 //auto scroll active
-window.addEventListener("scroll", function (e) {
-    sections.forEach(function (item) {
-        let dataScroll = item.getAttribute("data-Scroll");
-        let scrollY = window.scrollY;
-        let top = item.offsetTop;
-        let height = item.offsetHeight;
-        if (scrollY >= top && scrollY < top + height) {
-            headerNav.forEach(function (i) {
-                i.classList.remove("header__nav-item--active");
-                if (i.getAttribute("data-NavScroll") === dataScroll) {
-                    i.classList.add("header__nav-item--active");
+sections.forEach(function (item) {
+    let { top } = item.getBoundingClientRect();
+    let dataScroll = item.getAttribute("data-Scroll");
+    window.addEventListener("scroll", function (e) {
+        if (window.scrollY > top + this.screenY / 2) {
+            headerNav.forEach(function (item) {
+                if (item.getAttribute("data-NavScroll") === dataScroll) {
+                    headerNav.forEach((i) =>
+                        i.classList.remove("header__nav-item--active")
+                    );
+                    item.classList.add("header__nav-item--active");
                 }
             });
         }
